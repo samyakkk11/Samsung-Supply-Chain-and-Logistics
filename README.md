@@ -1,6 +1,6 @@
 # Samsung Supply Chain & Logistics Analytics Dashboard
 
-An end-to-end Power BI dashboard analyzing Samsung's simulated global supply chain — from supplier procurement through inventory, shipment logistics, and final sales across commercial channels. Built as a 5-page report: Overview, Supplier, Inventory, Shipment, and Customer.
+An end-to-end Power BI dashboard analyzing Samsung's simulated global supply chain — from supplier procurement through inventory, shipment logistics, and final sales across commercial channels. Built as a 6-page report: Home, Overview, Supplier, Inventory, Shipment, and Customer.
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/DAX-217346?style=flat)
@@ -42,36 +42,41 @@ Goal: give supply chain stakeholders a single source of truth to spot bottleneck
 - `fact_shipment` and `fact_sales` both link to `dim_customer` and `dim_date`, connecting the logistics side of the model to the commercial side.
 - `dim_date` acts as the central time dimension, joined across all five fact tables via their respective date keys (`date_key`, `order_date_key`, `delivery_date_key`).
 
-![Data Model](screenshots/data_model.png)
+![Data Model](screenshots/Data_model.png)
 
 ---
 
 ## 📊 Dashboard Pages
 
-### 1. Overview
+### 1. Home
+Branded landing page with the Samsung wordmark, dashboard title, and top navigation bar (Home, Overview, Supplier, Inventory, Shipment, Customer) alongside product imagery.
+
+![Home Page](screenshots/Home.png)
+
+### 2. Overview
 Landing/summary page showing top-line KPIs across all four functional areas with click-through navigation: **Gross Revenue ₹186.86M**, **Total Revenue ₹176.95M**, **Profit ₹48.56M**, **Profit Margin 27.44%**, **Perfect Order 75%**, **Total Shipments 8K**. Includes quick-view charts for Supplier Lead Time, Inventory Stock by Product, Total Delay by Carrier, and Total Revenue by platform.
 
-![Overview Page](screenshots/overview.png)
+![Overview Page](screenshots/Overview.png)
 
-### 2. Supplier
+### 3. Supplier
 Tracks 7 suppliers across South Korea, Vietnam, China, Taiwan, India, and Japan. **Total Unit Cost ₹78.13M**, **Order Quantity 129K**, **Avg Lead Time 11.53 days**, **Avg Quality Score 96.63**. South Korea leads in order quantity (36K); BOE Technology and Samsung Vietnam top the cost/lead-time charts. A field parameter toggles the monthly trend chart between Unit Cost and Order Quantity.
 
-![Supplier Page](screenshots/supplier.png)
+![Supplier Page](screenshots/Supplier.png)
 
-### 3. Inventory
+### 4. Inventory
 Warehouse and stock health: **Inventory Value 160K**, **Safety Stock 89K**, **Turnover Rate 117.03%**, **Days of Inventory 311.88**, **Defective Units 24K**. Defect rate spikes sharply in October (peak of the year) before tapering into November/December. Galaxy S24 Ultra carries both the highest current stock (25K) and the highest defect count (4.3K).
 
-![Inventory Page](screenshots/inventory.png)
+![Inventory Page](screenshots/Inventory.png)
 
-### 4. Shipment
+### 5. Shipment
 Logistics performance: **Total Shipments 8K**, **Shipment Cost ₹19.42M**, **Orders Delayed 573**, **Orders Delivered 6K**, **Delivered % 75.29%**. Maersk Line has the highest delay count among carriers (87), followed by DHL Express (66). **Carrier Capacity** (90) and **Documentation Issues** (78) are the top two reasons for delay, ahead of Port Congestion, Customs Clearance, and Weather Disruption.
 
-![Shipment Page](screenshots/shipment.png)
+![Shipment Page](screenshots/Shipment.png)
 
-### 5. Customer
+### 6. Customer
 Commercial performance: **Gross Revenue ₹186.86M**, **Total Revenue ₹176.95M**, **Profit ₹48.56M**, **Profit Margin 27.44%**, **Discount Amount ₹9.92M**. Online is the largest revenue channel (₹73.24M), ahead of Retailer (₹71.51M) and Direct (₹32.2M). Amazon.com Inc. leads by platform revenue (₹37M), narrowly ahead of Flipkart and Best Buy Co. Inc. (₹36M each). Smartphones dominate category sales (₹98.71M). May was the weakest month for YoY growth (81.20%); October was the strongest (113.87%). A field parameter toggles the monthly chart between Total Revenue and Profit.
 
-![Customer Page](screenshots/customer.png)
+![Customer Page](screenshots/Customer.png)
 
 ---
 
@@ -139,7 +144,7 @@ Cost_quantity_supplier = {
 }
 ```
 
-![Measures Table](screenshots/measures_table.png)
+![Measures Table](screenshots/Measures_table.png)
 
 ---
 
@@ -166,13 +171,14 @@ Cost_quantity_supplier = {
 ├── Samsung_Supply_Chain_Dashboard.pbix
 ├── /data                  # Source CSVs (synthetic/AI-generated)
 ├── /screenshots
-│   ├── data_model.png
-│   ├── measures_table.png
-│   ├── overview.png
-│   ├── supplier.png
-│   ├── inventory.png
-│   ├── shipment.png
-│   └── customer.png
+│   ├── Data_model.png
+│   ├── Measures_table.png
+│   ├── Home.png
+│   ├── Overview.png
+│   ├── Supplier.png
+│   ├── Inventory.png
+│   ├── Shipment.png
+│   └── Customer.png
 └── README.md
 ```
 
