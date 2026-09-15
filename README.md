@@ -105,17 +105,6 @@ Reorder Point = SUM(Inventory[Reorder Point])
 
 ---
 
-## 📁 Repository Contents
-
-```
-├── Samsung_Supply_Chain_Dashboard.pbix
-├── /data                  # Source CSVs (synthetic/AI-generated)
-├── /screenshots           # Dashboard page images
-└── README.md
-```
-
----
-
 ## 🔍 What I'd Improve Next
 
 - Replace synthetic data with a real open dataset to validate the model against messier, less clean data
