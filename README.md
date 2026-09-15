@@ -42,7 +42,7 @@ Goal: give supply chain stakeholders a single source of truth to spot bottleneck
 - `fact_shipment` and `fact_sales` both link to `dim_customer` and `dim_date`, connecting the logistics side of the model to the commercial side.
 - `dim_date` acts as the central time dimension, joined across all five fact tables via their respective date keys (`date_key`, `order_date_key`, `delivery_date_key`).
 
-![Data Model](screenshots/Data_model.png)
+![Data Model](Screenshots/Data_model.png)
 
 ---
 
@@ -51,32 +51,32 @@ Goal: give supply chain stakeholders a single source of truth to spot bottleneck
 ### 1. Home
 Branded landing page with the Samsung wordmark, dashboard title, and top navigation bar (Home, Overview, Supplier, Inventory, Shipment, Customer) alongside product imagery.
 
-![Home Page](screenshots/Home.png)
+![Home Page](Screenshots/Home.png)
 
 ### 2. Overview
 Landing/summary page showing top-line KPIs across all four functional areas with click-through navigation: **Gross Revenue ₹186.86M**, **Total Revenue ₹176.95M**, **Profit ₹48.56M**, **Profit Margin 27.44%**, **Perfect Order 75%**, **Total Shipments 8K**. Includes quick-view charts for Supplier Lead Time, Inventory Stock by Product, Total Delay by Carrier, and Total Revenue by platform.
 
-![Overview Page](screenshots/Overview.png)
+![Overview Page](Screenshots/Overview.png)
 
 ### 3. Supplier
 Tracks 7 suppliers across South Korea, Vietnam, China, Taiwan, India, and Japan. **Total Unit Cost ₹78.13M**, **Order Quantity 129K**, **Avg Lead Time 11.53 days**, **Avg Quality Score 96.63**. South Korea leads in order quantity (36K); BOE Technology and Samsung Vietnam top the cost/lead-time charts. A field parameter toggles the monthly trend chart between Unit Cost and Order Quantity.
 
-![Supplier Page](screenshots/Supplier.png)
+![Supplier Page](Screenshots/Supplier.png)
 
 ### 4. Inventory
 Warehouse and stock health: **Inventory Value 160K**, **Safety Stock 89K**, **Turnover Rate 117.03%**, **Days of Inventory 311.88**, **Defective Units 24K**. Defect rate spikes sharply in October (peak of the year) before tapering into November/December. Galaxy S24 Ultra carries both the highest current stock (25K) and the highest defect count (4.3K).
 
-![Inventory Page](screenshots/Inventory.png)
+![Inventory Page](Screenshots/Inventory.png)
 
 ### 5. Shipment
 Logistics performance: **Total Shipments 8K**, **Shipment Cost ₹19.42M**, **Orders Delayed 573**, **Orders Delivered 6K**, **Delivered % 75.29%**. Maersk Line has the highest delay count among carriers (87), followed by DHL Express (66). **Carrier Capacity** (90) and **Documentation Issues** (78) are the top two reasons for delay, ahead of Port Congestion, Customs Clearance, and Weather Disruption.
 
-![Shipment Page](screenshots/Shipment.png)
+![Shipment Page](Screenshots/Shipment.png)
 
 ### 6. Customer
 Commercial performance: **Gross Revenue ₹186.86M**, **Total Revenue ₹176.95M**, **Profit ₹48.56M**, **Profit Margin 27.44%**, **Discount Amount ₹9.92M**. Online is the largest revenue channel (₹73.24M), ahead of Retailer (₹71.51M) and Direct (₹32.2M). Amazon.com Inc. leads by platform revenue (₹37M), narrowly ahead of Flipkart and Best Buy Co. Inc. (₹36M each). Smartphones dominate category sales (₹98.71M). May was the weakest month for YoY growth (81.20%); October was the strongest (113.87%). A field parameter toggles the monthly chart between Total Revenue and Profit.
 
-![Customer Page](screenshots/Customer.png)
+![Customer Page](Screenshots/Customer.png)
 
 ---
 
