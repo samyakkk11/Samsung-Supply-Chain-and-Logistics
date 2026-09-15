@@ -143,15 +143,11 @@ Cost_quantity_supplier = {
     ("Order Quantity", NAMEOF('Measures_table'[Order_Qty]), 1)
 }
 ```
-
-![Measures Table](screenshots/Measures_table.png)
-
 ---
 
 ## 🎨 Technical & UI/UX Details
 
 - Custom JSON theme applied for consistent brand colors across all pages
-- Custom image slicers using product thumbnails (Galaxy S24 Ultra, S23, Galaxy Buds) alongside standard button slicers
 - Dynamic Field Parameters to swap chart measures without adding extra visuals
 - Collapsible side filter panel to maximize report canvas space
 
@@ -169,8 +165,9 @@ Cost_quantity_supplier = {
 
 ```
 ├── Samsung_Supply_Chain_Dashboard.pbix
-├── /data                  # Source CSVs (synthetic/AI-generated)
-├── /screenshots
+├── /Dataset                  # Source CSVs (synthetic/AI-generated)
+├──/Images
+├── /Screenshots
 │   ├── Data_model.png
 │   ├── Measures_table.png
 │   ├── Home.png
